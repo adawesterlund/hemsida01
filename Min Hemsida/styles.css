@@ -1,0 +1,257 @@
+
+@font-face{
+  font-family: myFont;
+   src: url(VCR_OSD_MONO_1.001.ttf);
+  
+}
+
+
+
+:root {
+    --main-color:rgb(255, 167, 73);
+    --secondary-color:rgb(8, 43, 0);
+    --white-color:rgb(249, 247, 243);
+    --link-color: rgb(0, 0, 255);
+    
+
+}
+
+
+.nav-link{
+display: inline-block;
+width: 4vw;
+text-align: center;
+border-left: 1px solid black;
+
+
+
+
+
+}
+
+
+body{
+  cursor: url(resurser/pointer.svg), auto;
+    font-family: myFont;
+    color: var(--secondary-color);
+-webkit-font-smoothing: none;
+font-kerning: none;
+
+    image-rendering: pixelated;
+    display: grid;
+    grid-template-columns: auto 50vw auto;
+grid-template-areas: "hd hd hd"
+"sdr main sdl";
+grid-gap: 10px;
+background-color: var(--white-color);
+
+
+}
+
+
+.main{
+grid-area: main;
+margin: auto;
+width: 100%;
+overflow-x: hidden;
+
+
+}
+
+
+
+.sdr{
+grid-area: sdr;
+}
+header{
+ grid-area: hd;   
+ margin: auto;
+ text-align: center;
+}
+
+
+.rader-tre{
+grid-template-columns: 1 2 3;
+grid-template-rows: 1 2 3;
+
+}
+.iframe{
+    min-height: 50vh;
+   width: 100%;
+    margin: auto;
+    
+}
+.dot:after{content: '<';visibility: hidden;}
+.dot:hover:after {display: inline-block;visibility: visible;}
+.dot:hover{
+text-decoration: none;
+cursor: url(cursor.svg);
+}
+
+
+.border{
+ padding: 0.5vw;
+border: 3px solid var(--secondary-color);
+   border-style: double;
+   border-radius: 2px;
+
+background-color: var(--white-color);
+}
+
+
+.hem{
+    color: black;
+    background-color: transparent;
+    text-shadow: none;
+
+}
+.hem:hover{
+    color: rgb(87, 87, 87);
+   
+
+}
+
+/*.  SCROLL.   */
+        .scroll {
+
+        overflow-y: scroll;
+        padding: 10px;
+        max-height: 2fr;
+
+
+        }
+
+        .scroll::-webkit-scrollbar {
+                    width: 15px;
+                    -webkit-appearance: none;
+                }
+
+        .scroll::-webkit-scrollbar-track {
+                background-image: url(resurser/ditherhalftone.svg);
+     
+
+                }
+
+        .scroll::-webkit-scrollbar-thumb {
+                
+        background-color: rgb(255, 147, 39);
+        border: 3px outset rgb(255, 157, 105);; 
+        height: 10vh;
+        
+                }
+
+        .scroll::-webkit-scrollbar-thumb:hover {
+                    background: rgb(255, 221, 169);
+                }
+
+        .scroll::-webkit-scrollbar-thumb:active{
+
+        background: #1414141f; 
+
+        border: 2px dotted black;
+      
+        }
+
+
+
+
+/*LÄNKAR*/
+
+            a:link {
+            color: var(--link-color);
+            background-color: transparent;
+            text-decoration: none;
+            margin: auto;
+            text-align: center;
+              
+            }
+            a:visited {
+            color: var(--link-color);
+            background-color: transparent;
+         text-shadow: 1px 1px 1px var(--main-color);
+            }
+            a:hover {
+            color: rgb(255, 0, 195);
+            background-color: transparent;
+            text-decoration: wavy underline;
+            cursor: url(resurser/link.svg), auto;
+          
+
+            }
+            a:active {
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+            text-decoration: none;
+            cursor: url(link2.svg),
+            }
+
+
+/*Marquee*/
+
+/* Marquee styles */
+.marquee {
+  padding: none;
+  --gap: 0px;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: none;
+}
+
+.marquee__content {
+  flex-shrink: 0;
+  display: flex;
+  
+  gap: var(--gap);
+  min-width: 100%;
+    animation: scroll 10s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+.img{
+object-fit: contain;
+image-rendering: pixelated;
+
+}
+
+
+
+/* Pause on hover */
+.marquee--hover-pause:hover .marquee__content {
+  animation-play-state: paused;
+  color: white;
+  background-color: black;
+}
+
+
+
+@keyframes scroll-abs {
+  from {
+    transform: translateX(calc(100% + var(--gap)));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Other page demo styles */
+.marquee__content > * {
+  flex: 0 0;
+  margin: none;
+  list-style-type: none;
+}
+
+.marquee {
+  border-bottom: 2px dashed rgb(0, 0, 0);
+}
+
+
