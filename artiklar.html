@@ -3,10 +3,22 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Texter</title>
+        <title>TEXTER & ARTIKLAR ADA WESTERLUND</title>
                  <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="prefetch.js" defer></script>
      <link rel="icon" type="image/x-icon" href="medrep.svg">
+
+     <script language=javascript>
+window.onload = function() { 
+  let title = document.title; 
+  let index = 0; 
+   
+  setInterval(function() { 
+    index = (index + 1) % (title.length + 1); 
+    document.title = title.substring(index, title.length) + title.substring(0, index); 
+  }, 200); 
+}; 
+</script>
 </head>
 <body>
         <body style="overflow: hidden;">
@@ -24,7 +36,7 @@
         
 <div class="main border">
 
-<h2>Texter</h2>
+<h2 style="text-align: center;">Texter</h2>
 <ul>
 <li><a href="trumhistoria.html" class="dot">Trumhistoria</a></li>
 
