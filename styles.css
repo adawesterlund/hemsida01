@@ -6,7 +6,6 @@
 }
 html{
 font-family: myfont;
-text-underline-offset: 0.4em;
 }
 
 
@@ -35,7 +34,11 @@ font-size: x-large;
 
 }
 
+i{
+color: rgb(88, 88, 88);
+text-shadow: 1px 1px 0px rgb(193, 193, 193);
 
+}
 body{
      min-width:300px;        /* Suppose you want minimum width of 1000px */
    width: auto !important;  /* Firefox will set width as auto */
