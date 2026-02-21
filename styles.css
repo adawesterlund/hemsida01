@@ -1,13 +1,21 @@
 
 @font-face{
   font-family: myfont;
-   src: url(sysfont.woff2);
+  src: url('sysfont.woff2') format('woff2'),
+  url('sysfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
   
 }
 html{
 font-family: myfont;
 image-rendering: pixelated;
+   -webkit-font-smoothing: none;
+   -moz-osx-font-smoothing: grayscale;
+   font-smooth: none;
+    height: 100%;
 }
+
 
 
 
@@ -27,11 +35,12 @@ margin: auto;
 }
 
 .nav-link{
+  flex-wrap: wrap;
 display: inline-block;
-width: 15%;
+min-width: 3em;
 text-align: center;
 border-left: 1px solid black;
-font-size: x-large;
+font-size: 16px;
 
 }
 
@@ -41,11 +50,15 @@ text-shadow: 1px 1px 0px rgb(193, 193, 193);
 
 }
 body{
+
+     background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;   
+    height: 100%;
      min-width:300px;        /* Suppose you want minimum width of 1000px */
    width: auto !important;  /* Firefox will set width as auto */
-   width:1000px;    
   cursor: url(resurser/pointer.svg), auto;
-  font-size: large;
+  font-size: 16px;
   line-height: 140%;
   
     color: var(--secondary-color);
@@ -54,10 +67,11 @@ font-kerning: none;
 
     image-rendering: pixelated;
     display: grid;
-    grid-template-columns: auto 60vw auto;
+    grid-template-columns: auto 70vw auto;
 grid-template-areas: "hd hd hd"
 "sdr main sdl";
-grid-gap: 10px;
+grid-template-rows: auto 1fr;
+grid-gap: 8px;
 background-color: var(--white-color);
 
 
