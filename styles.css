@@ -6,6 +6,7 @@
 }
 html{
 font-family: myfont;
+image-rendering: pixelated;
 }
 
 
@@ -74,10 +75,10 @@ overflow-x: hidden;
 }
 
 
-
 .sdr{
 grid-area: sdr;
 }
+
 header{
  grid-area: hd;   
  width: 100%;
@@ -86,11 +87,6 @@ header{
 }
 
 
-.rader-tre{
-grid-template-columns: 1 2 3;
-grid-template-rows: 1 2 3;
-
-}
 .iframe{
     min-height: 50vh;
    width: 100%;
@@ -217,7 +213,7 @@ text-shadow: 2px 2px 0px rgb(131, 131, 131) !important;
             color: rgb(255, 255, 255);
             font-weight: bold;
             text-decoration: none;
-            cursor: url(link2.svg),
+            cursor: url(resurser/link.svg), auto,
             
             }
 
@@ -258,6 +254,12 @@ object-fit: contain;
 image-rendering: pixelated;
 
 }
+
+
+
+
+
+
 
 .center{
 text-align: center;
