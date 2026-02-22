@@ -219,7 +219,7 @@ text-shadow: 2px 2px 0px rgb(131, 131, 131) !important;
             color: rgb(255, 0, 230);
             background-color: transparent;
             text-decoration: wavy underline;
-            cursor: url(resurser/link.svg), auto;
+            cursor: url(resurser/cursor-click.svg), auto;
           
 
             }
@@ -227,7 +227,7 @@ text-shadow: 2px 2px 0px rgb(131, 131, 131) !important;
             color: rgb(255, 255, 255);
             font-weight: bold;
             text-decoration: none;
-            cursor: url(resurser/link.svg), auto,
+            cursor: url(resurser/cursor-click.svg), auto,
             
             }
 
